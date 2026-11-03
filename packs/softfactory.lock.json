@@ -1,0 +1,27 @@
+{
+  "lock_version": "sha256-framed-v1",
+  "suite_name": "softfactory-plumb",
+  "suite_version": "0.1.0",
+  "suite_digest": "676d3afdfe055bcc3e6c4bc028f58f044e68e1f38a60eef03b73507d1ddac365",
+  "cases": {
+    "sf-harness-distillation-tost": {
+      "case_id": "sf-harness-distillation-tost",
+      "stratum": "hygiene",
+      "dataset_sha256": "14ba4229c1b3135bfe183ec41ac73772119abe4ad7448a1bf724151ba08fd646",
+      "spec_sha256": "27494e49a3637ec98aabc80ede22655c5067a055ec4942e6ebca81fda695594c"
+    },
+    "sf-orchestrator-surgical-fix": {
+      "case_id": "sf-orchestrator-surgical-fix",
+      "stratum": "core",
+      "dataset_sha256": "01834ebbcf14f3668f632434f7537ce980f0248e3e5b26cd44e5635b735b4805",
+      "spec_sha256": "53582bec5c8bf41e8f13425620cd44dc533c05c97e5677d1890815ccd8abcdec"
+    },
+    "sf-vsp-rls-paired-win": {
+      "case_id": "sf-vsp-rls-paired-win",
+      "stratum": "critical",
+      "dataset_sha256": "e8582b3641189591ddbc7a515bc41d2ed3513d7f2574cd03d91e28c27c9e680f",
+      "spec_sha256": "33ee0a76ee5a147bedcf2fb20a4f2f29476015800e1cbcc5ac80dea3fe9a0753"
+    }
+  },
+  "overall_lock_digest": "f8fa46be1cdd241639d71070947a17bcbffbff4a9e37ff38476122756bf28631"
+}

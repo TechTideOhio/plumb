@@ -1,0 +1,55 @@
+[suite]
+name = "softfactory-plumb"
+version = "0.1.0"
+description = "Soft Factory statistical significance and paired evaluation suite"
+target_harness = "agent-harness"
+
+[weights]
+critical = 0.50
+core = 0.35
+hygiene = 0.15
+
+[[cases]]
+id = "sf-vsp-rls-paired-win"
+stratum = "critical"
+severity = "blocker"
+description = "VSP Supabase RLS paired migration evaluation: verified superiority with paired 95% CI strictly > 0 and exact McNemar p <= 0.05"
+pairs_path = "packs/fixtures/vsp_rls_paired_100.jsonl"
+objective = "superiority"
+min_examples = 50
+alpha = 0.05
+min_delta = 0.0
+equivalence_margin = 0.05
+max_regression_rate = 0.05
+bootstrap_iterations = 10000
+seed = 42
+
+[[cases]]
+id = "sf-orchestrator-surgical-fix"
+stratum = "core"
+severity = "graded"
+description = "TechTideAI2 orchestrator routing fix: surgical win (6 gains, 0 regressions) proven by paired McNemar despite unpaired test missing significance"
+pairs_path = "packs/fixtures/orchestrator_surgical_100.jsonl"
+objective = "superiority"
+min_examples = 50
+alpha = 0.05
+min_delta = 0.0
+equivalence_margin = 0.05
+max_regression_rate = 0.05
+bootstrap_iterations = 10000
+seed = 42
+
+[[cases]]
+id = "sf-harness-distillation-tost"
+stratum = "hygiene"
+severity = "graded"
+description = "Agent harness prompt distillation: TOST equivalence test proving model parity within +/-5% at 60% lower token cost"
+pairs_path = "packs/fixtures/harness_distillation_100.jsonl"
+objective = "equivalence"
+min_examples = 50
+alpha = 0.05
+min_delta = 0.0
+equivalence_margin = 0.05
+max_regression_rate = 0.05
+bootstrap_iterations = 10000
+seed = 42
